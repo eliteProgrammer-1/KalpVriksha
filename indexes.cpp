@@ -1,18 +1,26 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include<iostream>
+
 
 int main()
 {
-    int size;
-    scanf("%d", &size);
-    char* str = (char*)malloc(sizeof(size));
-    scanf("%s", str);
+	char* myArray = new char[8];
+    myArray[0] = 'V';
+    myArray[1] = 'a';
+    myArray[2] = 'r';
+    myArray[3] = 't';
+    myArray[4] = 'i';
+    myArray[5] = 'k';
+    myArray[6] = 'a';
+    myArray[7] = '\0';
 
-    str = str - 'a';
-    for (char c = 'a'; str[c] != '\0'; c++)
-    {
-        printf("%c", str[c]);
-    }
-    
+    myArray = myArray - 'a';
+  	
+  	std:: cout << myArray['a'];
+  	std:: cout << myArray['b'];
+  	std:: cout << myArray['c'];
+  	std:: cout << myArray['d'];
+  	std:: cout << myArray['e'];
+  	std:: cout << myArray['f'];
+  	std:: cout << myArray['g'];
     return 0;
 }
