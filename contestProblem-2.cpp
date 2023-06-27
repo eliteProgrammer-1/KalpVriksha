@@ -37,20 +37,6 @@ struct Node *createTree()
     return root;
 }
 
-void findPath(struct Node *root, const char *value, char **path, int index)
-{
-    if (root == NULL)
-        return;
-
-    strcpy(path[index], root->data);
-    if (strcmp(root->data, value) == 0)
-    {
-        return;
-    }
-
-    findPath(root->left, value, path, index + 1);
-    findPath(root->right, value, path, index + 1);
-}
 
 int main()
 {
